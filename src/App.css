@@ -1,38 +1,94 @@
-.App {
+.appTitle{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.step_form{
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 10px;
+  margin-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.step_form .numbers{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.step_form .numbers .num{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(201, 201, 201);
+  display: grid;
+  place-content: center;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.step_form .numbers .num.active{
+  background-color: blueviolet;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons button{
+  padding: 8px 20px;
+  background-color: blueviolet;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons button:disabled{
+  opacity: 0.4;
+  cursor: auto;
+}
+
+form .inpBox{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+form .inpBox input,form .inpBox select{
+  padding: 5px;
+}
+
+.dataTable{
+  max-width: 500px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.dataTable tr{
+  width: 100%;
+}
+
+.dataTable td,.dataTable th{
+  width: 33.33%;
+  text-align: left;
+}
+
+.userData{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 30px;
+}
+
+.s_data{
+  padding: 10px;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 10px;
 }
